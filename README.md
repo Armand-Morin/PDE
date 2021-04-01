@@ -1,36 +1,35 @@
-# PDE 
-# Modélisation d'un écoulement dans un tube avec présence d'un cylindre
+# PDE mini-project Armand MORIN
+# Modeling of a flow in a tube with presence of cylinder
 
 
-Le projet consiste à étudier l'écoulement d'un fluide (de l'eau, mais ça peut aussi être de l'huile dans un vérin ou un autre fluide) dans un tuyau contenant un cylindre. Cette modélisation est donc basée sur l'étude des équations de Navier Stokes.
-On considère les équations générales incompressibles de Navier-Stokes sur un domaine <img src="https://latex.codecogs.com/svg.latex?\Omega%20\subset%20\mathbb{R}%20^2" />, consistant en une paire d'équations ou $ u $ correspond à la vitesse du fluide et p  à la pression:
+The project consists of studying the flow of a fluid (water, but it can also be oil in a cylinder or another fluid) in a pipe containing a cylinder. This modeling is therefore based on the study of the Navier Stokes equations.
+We consider the general incompressible Navier-Stokes equations on a domain <img src="https://latex.codecogs.com/svg.latex?\Omega%20\subset%20\mathbb{R}%20^2" />, consisting of a pair of equations where u corresponds to the velocity of the fluid and p to the pressure:
 
 <img src="https://latex.codecogs.com/svg.latex?\begin{cases}\rho\frac{\partial%20u}{\partial%20t}%20%20+%20u%20\nabla%20u%20-%20\nu\Delta%20%20u%20+%20\nabla%20p%20=%200%20%20\\\nabla%20u%20=0%20\\\end{cases}" /> 
  
  
-Avec le paramètre <img src="https://latex.codecogs.com/svg.latex?\nu"/> est la viscosité dynamique.
+With the parameter <img src="https://latex.codecogs.com/svg.latex?\nu"/> is the dynamic viscosity.
 
-Ce problème combine plusieurs défis car dans les équations, nous avons une dépendance temporelle de plus elles sont non-linéaires et les variables sont à valeurs vectorielles. De plus il y a deux inconnues que l'on cherche : la vitesse et la pression.
+This problem combines several challenges because in the equations we have a time dependence of more they are nonlinear and the variables are vector values. In addition there are two unknowns that we are looking for: speed and pressure.
 
-
-Dans notre cas, le modèle on peut se réécrire de la manière suivante :
+In our case, the model can be rewritten as follows:
 
 <img src="https://latex.codecogs.com/svg.latex?\begin{cases}\rho(\frac{\partial%20u}{\partial%20t}%20%20+%20(u%20\cdot%20\nabla)%20u)%20=%20\nu\nabla%20%20\sigma(u,p)%20+%20f%20%20%20\\\nabla%20u%20=0%20\\\end{cases}" />
 
-Du côté droit f est une force donnée exprimée par unité de volume, <img src="https://latex.codecogs.com/svg.latex?\sigma%20(%20u%20,%20p%20)" /> désigne le tenseur des contraintes, qui pour un fluide newtonien est donné par: <img src="https://latex.codecogs.com/svg.latex?\sigma(%20u%20,%20p%20)%20=%202%20\mu%20\epsilon%20(%20u%20)%20-%20p%20I" />
+On the right side f is a given force expressed per unit volume, <img src="https://latex.codecogs.com/svg.latex?\sigma%20(%20u%20,%20p%20)" /> indicate the tensor of the stresses, which for a Newtonian fluid is given by: <img src="https://latex.codecogs.com/svg.latex?\sigma(%20u%20,%20p%20)%20=%202%20\mu%20\epsilon%20(%20u%20)%20-%20p%20I" />
 
 
-et où <img src="https://latex.codecogs.com/svg.latex?\epsilon%20(%20u%20)" />  est le tenseur de la vitesse de déformation suivant:
+and where<img src="https://latex.codecogs.com/svg.latex?\epsilon%20(%20u%20)" />  is the tensor of the following strain rate:
 <img src="https://latex.codecogs.com/svg.latex?\epsilon%20(%20u%20)%20=1/2(%20\nabla%20u%20+%20(%20\nabla%20u)^T)" />
 
 
-# Résultats :
-Les photos suivantes ont été obtenues pour une valeur de <img src="https://latex.codecogs.com/svg.latex?\nu=0.001"/>.
+# Results :
+The following photos were obtained for a value of <img src="https://latex.codecogs.com/svg.latex?\nu=0.001"/>.
 
-Ce sont les résultats que j'ai obtenu en prenant un cylindre au milieu du canal d'écoulement de l'eau. On aurait pu prendre une autre forme géometrique pour observer son impact sur l'évolution du flux d'eau.
+These are the results I got by taking a cylinder in the middle of the water flow channel. We could have taken another geometric shape to observe its impact on the evolution of the water flow.
 
-On remarque qu'il y a apparition d'oscillations et que le fluide devient turbulent à la sortie du canal.  
-Par ailleurs derrière le cylindre on peut remarque qu'il y a des vortex (Tourbillon qui se produit dans la fluide). Ces derniers sont à éviter car ils ralentissent considérablement la vitesse d'écoulement dans le tube 
+We notice that there is the appearance of oscillations and that the fluid becomes turbulent at the outlet of the channel.
+Besides, behind the cylinder one can notice that there are vortices (vortex which occurs in the fluid). These should be avoided because they considerably slow down the flow rate in the tube.
 
 ![vitesse+pression100](https://user-images.githubusercontent.com/72650161/113295401-72c52700-92f8-11eb-8580-89387b4eb642.png)
 ![vitesse+pression500](https://user-images.githubusercontent.com/72650161/113295419-78227180-92f8-11eb-818b-44c664d4e07d.png)
@@ -42,28 +41,28 @@ Par ailleurs derrière le cylindre on peut remarque qu'il y a des vortex (Tourbi
 ![vitesse+pression4980](https://user-images.githubusercontent.com/72650161/113295502-925c4f80-92f8-11eb-8009-856045c3c6f3.png)
 
 # mu=0.005
-D'autres simulation avec un coefficient <img src="https://latex.codecogs.com/svg.latex?\nu=0.005"/> conduisent aux résultats suivants:
+Other simulation with a coefficient <img src="https://latex.codecogs.com/svg.latex?\nu=0.005"/> lead to the following results:
 ![vitesse+mu3200](https://user-images.githubusercontent.com/72650161/113295688-cf284680-92f8-11eb-8939-5027b138bcee.png)
-On remarque une sorte de "trainée" plus longue derrière le cylindre.
+We notice a kind of "trail" longer behind the cylinder.
 
 
 # mu=0.0005
-Cette simulation est effectuée pour <img src="https://latex.codecogs.com/svg.latex?\nu=0.0005"/>.
-On remarque qu'il a moins de turbulence et que l'écoulement est plus laminaire après le passage du cylindre. On en déduit que ce coefficient a une influence sur l'écoulement.
+This simulation is performed for <img src="https://latex.codecogs.com/svg.latex?\nu=0.0005"/>.
+We notice that it has less turbulence and that the flow is more laminar after the passage of the cylinder. It is deduced from this that this coefficient has an influence on the flow.
 ![vitesse+mu4980](https://user-images.githubusercontent.com/72650161/113295876-08f94d00-92f9-11eb-8987-90eade2f5574.png)
 
 
-## Bibliographie et références
-La référence que j'ai utilisé pour me servir de sujet est:
+## Bibliography and references
+The reference I used as a subject is:
 - [DFG flow around cylinder](http://www.featflow.de/en/benchmarks/cfdbenchmarking/flow/dfg_benchmark2_re100.html)
 
-Le site Fenics pour la documentation des fonctions, les exemples et tutoriels :
+The Fenics site for documentation of functions, examples and tutorials:
 - [fenics Project](https://fenicsproject.org)
 
 
-# Annexe
-Différents résultat :
-Lors de la simulation, j'ai obtenu des résultats comme ci-dessous lors que j'utilisais des fonctions linéaires par morceau comme espace de définition de V. Mais aussi lorsque j'utilisais des pas de temps trop grand les valeurs divergeaient aussi.
+# Annex
+Different results:
+During the simulation, I obtained results as below when I used linear functions per piece as the definition space of V. But also when I used too large time steps the values also diverged.
 
 
 ![image_6](https://user-images.githubusercontent.com/72650161/113296007-35ad6480-92f9-11eb-93ee-507d5eb5296b.png)
