@@ -1,13 +1,12 @@
-# PDE
+# PDE / partial differential equation
 # Modélisation d'un écoulement dans un tube avec présence d'un cylindre
 
-# partial differential equation
 
 Le projet consiste à étudier l'écoulement d'un fluide (de l'eau, mais ça peut aussi être de l'huile dans un vérin ou un autre fluide) dans un tuyau contenant un cylindre. Cette modélisation est donc basée sur l'étude des équations de Navier Stokes.
-On considère les équations générales incompressibles de Navier-Stokes sur un domaine $\Omega \subset \mathbb{R} ^2$, consistant en une paire d'équations ou $ u $ correspond à la vitesse du fluide et $ p$  à la pression:
+On considère les équations générales incompressibles de Navier-Stokes sur un domaine <img src="https://latex.codecogs.com/svg.latex?\Omega%20\subset%20\mathbb{R}%20^2" />, consistant en une paire d'équations ou $ u $ correspond à la vitesse du fluide et p  à la pression:
 
 <img src="https://latex.codecogs.com/svg.latex?\begin{cases}\rho\frac{\partial%20u}{\partial%20t}%20%20+%20u%20\nabla%20u%20-%20\nu\Delta%20%20u%20+%20\nabla%20p%20=%200%20%20\\\nabla%20u%20=0%20\\\end{cases}" /> 
-
+ 
  
 Avec le paramètre <img src="https://latex.codecogs.com/svg.latex?\nu"/> est la viscosité dynamique.
 
@@ -16,12 +15,10 @@ Ce problème combine plusieurs défis car dans les équations, nous avons une d�
 
 
 Dans notre cas, le modèle on peut se réécrire de la manière suivante :
-\begin{cases}
-\rho(\frac{\partial u}{\partial t}  + (u \cdot \nabla) u) = \nu\nabla  \sigma(u,p) + f   \\
-\nabla u =0 \\
-\end{cases}
- 
-Du côté droit f est une force donnée exprimée par unité de volume, $ σ( u , p ) $ désigne le tenseur des contraintes, qui pour un fluide newtonien est donné par:
+<img src="https://latex.codecogs.com/svg.latex?\begin{cases}\rho(\frac{\partial%20u}{\partial%20t}%20%20+%20(u%20\cdot%20\nabla)%20u)%20=%20\nu\nabla%20%20\sigma(u,p)%20+%20f%20%20%20\\\nabla%20u%20=0%20\\\end{cases}" />
+
+
+Du côté droit f est une force donnée exprimée par unité de volume, <img src="https://latex.codecogs.com/svg.latex?\sigma%20(%20u%20,%20p%20)" /> désigne le tenseur des contraintes, qui pour un fluide newtonien est donné par:
 $ σ( u , p ) = 2 μ ϵ ( u ) - p I $
 
 et où $ ϵ ( u ) $  est le tenseur de la vitesse de déformation suivant:
@@ -29,7 +26,7 @@ $ ϵ ( u ) =1/2( ∇ u + ( ∇ u)^T) $
 
 
 # Résultats :
-Les photos suivantes ont été obtenues pour une valeur de $ \mu=0.001$.
+Les photos suivantes ont été obtenues pour une valeur de <img src="https://latex.codecogs.com/svg.latex?\nu=0.001"/>.
 
 Ce sont les résultats que j'ai obtenu en prenant un cylindre au milieu du canal d'écoulement de l'eau. On aurait pu prendre une autre forme géometrique pour observer son impact sur l'évolution du flux d'eau.
 
@@ -46,13 +43,13 @@ Par ailleurs derrière le cylindre on peut remarque qu'il y a des vortex (Tourbi
 ![vitesse+pression4980](https://user-images.githubusercontent.com/72650161/113295502-925c4f80-92f8-11eb-8009-856045c3c6f3.png)
 
 # $\mu=0.005$
-D'autres simulation avec un coefficient $\mu=0.005$ conduisent aux résultats suivants:
+D'autres simulation avec un coefficient <img src="https://latex.codecogs.com/svg.latex?\nu=0.005"/> conduisent aux résultats suivants:
 ![vitesse+mu3200](https://user-images.githubusercontent.com/72650161/113295688-cf284680-92f8-11eb-8939-5027b138bcee.png)
 On remarque une sorte de "trainée" plus longue derrière le cylindre.
 
 
 # $\mu=0.0005$
-Cette simulation est effectuée pour $\mu=0.0005$.
+Cette simulation est effectuée pour <img src="https://latex.codecogs.com/svg.latex?\nu=0.0O05"/>.
 On remarque qu'il a moins de turbulence et que l'écoulement est plus laminaire après le passage du cylindre. On en déduit que ce coefficient a une influence sur l'écoulement.
 ![vitesse+mu4980](https://user-images.githubusercontent.com/72650161/113295876-08f94d00-92f9-11eb-8987-90eade2f5574.png)
 
