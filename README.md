@@ -20,3 +20,16 @@ Par ailleurs derrière le cylindre on peut remarque qu'il y a des vortex (Tourbi
 ![vitesse+pression2500](https://user-images.githubusercontent.com/72650161/113295497-912b2280-92f8-11eb-8de1-421a21a52233.png)
 ![vitesse+pression2100](https://user-images.githubusercontent.com/72650161/113295492-8ff9f580-92f8-11eb-9cbe-449fc3c05756.png)
 ![vitesse+pression4980](https://user-images.githubusercontent.com/72650161/113295502-925c4f80-92f8-11eb-8009-856045c3c6f3.png)
+
+# $\mu=0.005$
+D'autres simulation avec un coefficient $\mu=0.005$ conduisent aux résultats suivants:
+![vitesse+mu3200](https://user-images.githubusercontent.com/72650161/113295688-cf284680-92f8-11eb-8939-5027b138bcee.png)
+On remarque une sorte de "trainée" plus longue derrière le cylindre.
+
+
+# $\mu=0.0005$
+Cette simulation est effectuée pour $\mu=0.0005$.
+On remarque qu'il a moins de turbulence et que l'écoulement est plus laminaire après le passage du cylindre. On en déduit que ce coefficient a une influence sur l'écoulement.
+![vitesse+mu4980.png](attachment:vitesse+mu4980.png)
+
+
