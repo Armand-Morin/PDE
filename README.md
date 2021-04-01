@@ -1,15 +1,15 @@
 # PDE
-partial differential equation
+
+
+# partial differential equation
 
 Le projet consiste à étudier l'écoulement d'un fluide (de l'eau, mais ça peut aussi être de l'huile dans un vérin ou un autre fluide) dans un tuyau contenant un cylindre. Cette modélisation est donc basée sur l'étude des équations de Navier Stokes.
 On considère les équations générales incompressibles de Navier-Stokes sur un domaine $\Omega \subset \mathbb{R} ^2$, consistant en une paire d'équations ou $ u $ correspond à la vitesse du fluide et $ p$  à la pression:
 
-\begin{cases}
-\rho\frac{\partial u}{\partial t}  + u \nabla u - \nu\Delta  u + \nabla p = 0  \\
-\nabla u =0 \\
-\end{cases}
+<img src="https://latex.codecogs.com/svg.latex?\begin{cases}\rho\frac{\partial%20u}{\partial%20t}%20%20+%20u%20\nabla%20u%20-%20\nu\Delta%20%20u%20+%20\nabla%20p%20=%200%20%20\\\nabla%20u%20=0%20\\\end{cases}" /> 
+
  
-Avec le paramètre $ \nu $ est la viscosité dynamique.
+Avec le paramètre <img src="https://latex.codecogs.com/svg.latex?\nu"/> est la viscosité dynamique.
 
 
 Ce problème combine plusieurs défis car dans les équations, nous avons une dépendance temporelle de plus elles sont non-linéaires et les variables sont à valeurs vectorielles. De plus il y a deux inconnues que l'on cherche : la vitesse et la pression.
