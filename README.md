@@ -31,13 +31,21 @@ These are the results I got by taking a cylinder in the middle of the water flow
 We notice that there is the appearance of oscillations and that the fluid becomes turbulent at the outlet of the channel.
 Besides, behind the cylinder one can notice that there are vortices (vortex which occurs in the fluid). These should be avoided because they considerably slow down the flow rate in the tube.
 
+t=0.1s
 ![vitesse+pression100](https://user-images.githubusercontent.com/72650161/113295401-72c52700-92f8-11eb-8580-89387b4eb642.png)
+t=0.5s
 ![vitesse+pression500](https://user-images.githubusercontent.com/72650161/113295419-78227180-92f8-11eb-818b-44c664d4e07d.png)
+t=0.7s
 ![vitesse+pression700](https://user-images.githubusercontent.com/72650161/113295433-7c4e8f00-92f8-11eb-97a8-2d7b719bf41f.png)
+t=1.2s
 ![vitesse+pression1200](https://user-images.githubusercontent.com/72650161/113295481-8b354180-92f8-11eb-820d-29be89d58e9e.png)
+t=1.5s
 ![vitesse+pression1500](https://user-images.githubusercontent.com/72650161/113295488-8ec8c880-92f8-11eb-9aee-88b5e974bb8f.png)
+t=2.1s
 ![vitesse+pression2500](https://user-images.githubusercontent.com/72650161/113295497-912b2280-92f8-11eb-8de1-421a21a52233.png)
+t=2.5s
 ![vitesse+pression2100](https://user-images.githubusercontent.com/72650161/113295492-8ff9f580-92f8-11eb-9cbe-449fc3c05756.png)
+t=5s
 ![vitesse+pression4980](https://user-images.githubusercontent.com/72650161/113295502-925c4f80-92f8-11eb-8009-856045c3c6f3.png)
 
 # mu=0.005
