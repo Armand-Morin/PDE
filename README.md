@@ -30,6 +30,19 @@ On remarque une sorte de "trainée" plus longue derrière le cylindre.
 # $\mu=0.0005$
 Cette simulation est effectuée pour $\mu=0.0005$.
 On remarque qu'il a moins de turbulence et que l'écoulement est plus laminaire après le passage du cylindre. On en déduit que ce coefficient a une influence sur l'écoulement.
-![vitesse+mu4980.png](attachment:vitesse+mu4980.png)
+![vitesse+mu4980](https://user-images.githubusercontent.com/72650161/113295876-08f94d00-92f9-11eb-8987-90eade2f5574.png)
 
 
+## Bibliographie et références
+La référence que j'ai utilisé pour me servir de sujet est:
+- [DFG flow around cylinder](http://www.featflow.de/en/benchmarks/cfdbenchmarking/flow/dfg_benchmark2_re100.html)
+
+Le site Fenics pour la documentation des fonctions, les exemples et tutoriels :
+- [fenics Project](https://fenicsproject.org)
+
+
+# Annexe
+Différents résultat :
+Lors de la simulation, j'ai obtenu des résultats comme ci-dessous lors que j'utilisais des fonctions linéaires par morceau comme espace de définition de V. Mais aussi lorsque j'utilisais des pas de temps trop grand les valeurs divergeaient aussi.
+
+![image_6.png](attachment:image_6.png)
