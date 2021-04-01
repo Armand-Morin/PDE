@@ -1,7 +1,31 @@
 # PDE
 partial differential equation
 
+Le projet consiste à étudier l'écoulement d'un fluide (de l'eau, mais ça peut aussi être de l'huile dans un vérin ou un autre fluide) dans un tuyau contenant un cylindre. Cette modélisation est donc basée sur l'étude des équations de Navier Stokes.
+On considère les équations générales incompressibles de Navier-Stokes sur un domaine $\Omega \subset \mathbb{R} ^2$, consistant en une paire d'équations ou $ u $ correspond à la vitesse du fluide et $ p$  à la pression:
 
+\begin{cases}
+\rho\frac{\partial u}{\partial t}  + u \nabla u - \nu\Delta  u + \nabla p = 0  \\
+\nabla u =0 \\
+\end{cases}
+ 
+Avec le paramètre $ \nu $ est la viscosité dynamique.
+
+
+Ce problème combine plusieurs défis car dans les équations, nous avons une dépendance temporelle de plus elles sont non-linéaires et les variables sont à valeurs vectorielles. De plus il y a deux inconnues que l'on cherche : la vitesse et la pression.
+
+
+Dans notre cas, le modèle on peut se réécrire de la manière suivante :
+\begin{cases}
+\rho(\frac{\partial u}{\partial t}  + (u \cdot \nabla) u) = \nu\nabla  \sigma(u,p) + f   \\
+\nabla u =0 \\
+\end{cases}
+ 
+Du côté droit f est une force donnée exprimée par unité de volume, $ σ( u , p ) $ désigne le tenseur des contraintes, qui pour un fluide newtonien est donné par:
+$ σ( u , p ) = 2 μ ϵ ( u ) - p I $
+
+et où $ ϵ ( u ) $  est le tenseur de la vitesse de déformation suivant:
+$ ϵ ( u ) =1/2( ∇ u + ( ∇ u)^T) $
 
 
 # Résultats :
@@ -45,4 +69,5 @@ Le site Fenics pour la documentation des fonctions, les exemples et tutoriels :
 Différents résultat :
 Lors de la simulation, j'ai obtenu des résultats comme ci-dessous lors que j'utilisais des fonctions linéaires par morceau comme espace de définition de V. Mais aussi lorsque j'utilisais des pas de temps trop grand les valeurs divergeaient aussi.
 
-![image_6.png](attachment:image_6.png)
+
+![image_6](https://user-images.githubusercontent.com/72650161/113296007-35ad6480-92f9-11eb-93ee-507d5eb5296b.png)
